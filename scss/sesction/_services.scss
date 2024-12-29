@@ -1,0 +1,61 @@
+@use "../custom" as *;
+@use "../components/mix-in" as *;
+
+.Services{
+
+    .col-md-6
+    {
+
+        .display-5{
+            text-transform: capitalize;
+        }
+        
+        .service-heading{
+            background-image: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+           
+        }
+
+        .services-description{
+            line-height: 30px;
+        }
+
+        .icon{
+            margin-top: 5rem;
+            font-size: 3rem;
+            background-image: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @include media-breakpoint-down(md){
+                margin-top: 0;
+            }
+        }
+
+        .image{
+            img{
+                @include media-breakpoint-only(md){
+                    margin-top: 50px;
+                } 
+            }
+        }
+
+        
+    }
+}
+
+.Services-des{
+    line-height: 30px;
+    border-left: 1px solid $gray-300;
+}
+
+
+.web-section{
+    @include media-breakpoint-down(sm){
+        flex-direction: column-reverse;
+    }
+
+    @include media-breakpoint-down(md){
+        flex-direction: column-reverse;
+    }
+}
